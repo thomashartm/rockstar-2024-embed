@@ -1,0 +1,31 @@
+{
+  "include": [
+    "./local/**/*",
+    "./src/**/*",
+    "./test/**/*",
+    "./jest.config.ts"
+  ],
+  "ts-node": {
+    // these options are overrides used only by ts-node
+    // same as the --compilerOptions flag and the TS_NODE_COMPILER_OPTIONS environment variable
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "skipLibCheck": false,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "strictPropertyInitialization": false
+  }
+}

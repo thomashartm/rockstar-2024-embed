@@ -1,0 +1,62 @@
+{
+  "name": "ai-chat-embedder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "tsc --project tsconfig.json",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "playground": "ts-node -r dotenv/config ./local/loadEmbeddings.ts",
+    "embed": "ts-node -r dotenv/config ./local/loadTextEmbeddings.ts",
+    "format": "prettier --write \"app\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.22.5",
+    "@changesets/cli": "^2.27.1",
+    "@types/aws-lambda": "^8.10.119",
+    "@types/jest": "^29.5.3",
+    "@types/node": "20.10.4",
+    "@types/pg": "^8.11.2",
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "dotenv": "^16.3.1",
+    "esbuild": "^0.18.16",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^8.48.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^29.6.4",
+    "pg": "^8.11.3",
+    "pg-native": "^3.0.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript"
+    ]
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.525.0",
+    "@langchain/community": "^0.0.37",
+    "@langchain/openai": "^0.0.19",
+    "@mozilla/readability": "^0.5.0",
+    "ai": "^3.0.9",
+    "autoprefixer": "10.4.16",
+    "aws4": "^1.12.0",
+    "embedchain": "^0.0.8",
+    "eslint": "^8.55.0",
+    "eslint-config-next": "14.0.4",
+    "jsdom": "^24.0.0",
+    "langchain": "^0.1.27",
+    "openai": "^4.28.4",
+    "pg": "^8.11.3",
+    "pgvector": "^0.1.8",
+    "reflect-metadata": "^0.2.1",
+    "uuid": "^9.0.0"
+  }
+}
